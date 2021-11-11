@@ -1,0 +1,14 @@
+
+---
+# This playbook prints a simple debug message
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: Print debug message
+    debug:
+      msg: Hello, world!
+
+  - name: Run apt-get update
+    apt:
+      update_cache: yes
